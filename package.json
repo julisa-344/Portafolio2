@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-ux-ui",
+  "version": "1.0.0",
+  "description": "Portfolio de diseñadora UX/UI",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static site'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "portfolio",
+    "ux",
+    "ui",
+    "design",
+    "static"
+  ],
+  "author": "Julisa León",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

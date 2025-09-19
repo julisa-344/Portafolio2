@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio UX/UI Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>Portfolio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#portfolio" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Badge de presentación -->
+                <div class="hero-badge">
+                    <span class="badge-icon">✨</span>
+                    <span>Diseñadora UX/UI</span>
+                </div>
+
+                <!-- Headline principal - Propuesta de valor clara -->
+                <h1 class="hero-title">
+                    <span class="title-line">Creo</span>
+                    <span class="gradient-text">Experiencias Digitales</span>
+                    <span class="title-line">que Conectan</span>
+                </h1>
+
+                <!-- Subheadline - Habilidades principales -->
+                <p class="hero-description">
+                    Especializada en diseño centrado en el usuario, transformo ideas complejas 
+                    en interfaces intuitivas que generan impacto real y conexión emocional.
+                </p>
+
+                <!-- Call-to-Actions optimizados -->
+                <div class="hero-actions">
+                    <a href="#portfolio" class="cta-button primary">
+                        <span>Ver Mi Trabajo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="#contact" class="cta-button secondary">
+                        <span>Hablemos</span>
+                        <i class="fas fa-coffee"></i>
+                    </a>
+                </div>
+
+        
+            </div>
+
+            <!-- Componente visual mejorado -->
+            <div class="hero-visual">
+                <div class="hero-image-stack">
+                    <!-- Card principal con foto de perfil -->
+                    <div class="stack-item item-1 profile-card">
+                        <div class="profile-overlay">
+                            <div class="profile-content">
+                                <div class="profile-avatar">
+                                    <img src="me.jpeg" alt="Foto de perfil de la diseñadora" class="profile-image">
+                                </div>
+                                <div class="profile-info">
+                                    <h3>UX/UI Designer</h3>
+                                    <p>Experiencias que conectan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card secundaria con mockup -->
+                    <div class="stack-item item-2 mockup-card">
+                        <div class="mockup-content">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-line"></div>
+                                <div class="mockup-line short"></div>
+                                <div class="mockup-line medium"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card terciaria con iconos -->
+                    <div class="stack-item item-3 skills-card">
+                        <div class="skills-content">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>Responsive</h4>
+                                <p>Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicador de scroll mejorado -->
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">
+                    <span class="title-accent">Proyectos</span>
+                    <span class="title-main">Seleccionados</span>
+                </h2>
+                <p class="section-subtitle">Cada proyecto cuenta una historia única de innovación y creatividad</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <div class="filter-label">Filtrar por:</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <span>Todos</span>
+                        <div class="filter-count" id="count-all">0</div>
+                    </button>
+                    <button class="filter-btn" data-filter="calcomaniacos">
+                        <span>Calcomaniacos</span>
+                        <div class="filter-count" id="count-calcomaniacos">0</div>
+                    </button>
+                    <button class="filter-btn" data-filter="safety">
+                        <span>Safety</span>
+                        <div class="filter-count" id="count-safety">0</div>
+                    </button>
+                    <button class="filter-btn" data-filter="xplora">
+                        <span>Xplora</span>
+                        <div class="filter-count" id="count-xplora">0</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-wrapper">
+                <!-- Todos los proyectos cuando está activo el filtro "all" -->
+                <div id="all-projects" class="projects-section active">
+                    <div class="portfolio-grid" id="portfolioGrid">
+                        <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Proyecto Safety -->
+                <div id="safety-section" class="projects-section">
+                    <div class="project-intro">
+                        <div class="project-header">
+                            <h3 class="project-name">Safety</h3>
+                            <span class="project-type">Plataforma Educativa</span>
+                        </div>
+                        <p class="project-description">
+                            Diseño de experiencia educativa digital enfocada en Seguridad Industrial. Creación de flujos de 
+                            aprendizaje intuitivos, arquitectura de información clara y sistema de certificaciones que facilita 
+                            el acceso a capacitación especializada.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">User Journey</span>
+                            <span class="tag">Information Architecture</span>
+                            <span class="tag">E-learning UX</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid" id="safety-grid">
+                        <!-- Imágenes de Safety -->
+                    </div>
+                </div>
+
+                <!-- Proyecto Calcomaniacos -->
+                <div id="calcomaniacos-section" class="projects-section">
+                    <div class="project-intro">
+                        <div class="project-header">
+                            <h3 class="project-name">Calcomaniacos</h3>
+                            <span class="project-type">E-commerce Personalizado</span>
+                        </div>
+                        <p class="project-description">
+                            Rediseño completo de la experiencia de usuario para una plataforma de stickers personalizados. 
+                            Enfoque en simplificar el proceso de diseño, optimizar el flujo de compra y crear una interfaz 
+                            intuitiva que inspire creatividad en los usuarios.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Wireframing</span>
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">User Testing</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid" id="calcomaniacos-grid">
+                        <!-- Imágenes de Calcomaniacos -->
+                    </div>
+                </div>
+
+                <!-- Proyecto Xplora -->
+                <div id="xplora-section" class="projects-section">
+                    <div class="project-intro">
+                        <div class="project-header">
+                            <h3 class="project-name">Xplora</h3>
+                            <span class="project-type">Aplicación de Exploración</span>
+                        </div>
+                        <p class="project-description">
+                            Aplicación móvil para descubrimiento de experiencias locales. Diseño centrado en el usuario que 
+                            combina geolocalización inteligente con recomendaciones personalizadas, creando una experiencia 
+                            de exploración fluida y emocionante.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile UX</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Interaction Design</span>
+                            <span class="tag">Usability Testing</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-grid" id="xplora-grid">
+                        <!-- Imágenes de Xplora -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>¿Listo para crear algo increíble?</h2>
+                <p>Trabajemos juntos para dar vida a tu próximo proyecto</p>
+                <div class="contact-links">
+                    <a href="mailto:julisa.leon344@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        Enviar Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/julisa-leon-front-ui/" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-nav">
+                <button id="lightbox-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="lightbox-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="lightbox-counter">
+                <span id="lightbox-current">1</span>
+                <span class="counter-separator">/</span>
+                <span id="lightbox-total">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
